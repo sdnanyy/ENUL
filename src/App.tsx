@@ -18,10 +18,10 @@ function App() {
         setMobileMenuOpen={setMobileMenuOpen} 
       />
       <Hero />
-      <Pillars />
-      <EmotionalMentoring />
       <Problem />
+      <EmotionalMentoring />
       <Testimonials />
+      <Pillars />
       <CTA />
       <Footer />
     </div>
