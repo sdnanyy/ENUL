@@ -4,7 +4,7 @@ import AnimatedSection from './AnimatedSection';
 
 export default function EmotionalMentoring() {
   const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Quero conhecer mais sobre a mentoria emocional da Uni Languages!";
+  const whatsappMessage = "Olá! Quero conhecer mais sobre o método da Uni Languages!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   const mentoringFeatures = [
@@ -116,7 +116,7 @@ export default function EmotionalMentoring() {
         <div className="text-center">
           <AnimatedSection>
             <p className="text-lg sm:text-xl text-gray-700 mb-6 font-medium">
-              Pronta para transformar não só seu inglês, mas também sua autoestima?
+              Pronta para transformar seu jeito de falar inglês?
             </p>
             <a 
               href={whatsappUrl}
@@ -124,7 +124,7 @@ export default function EmotionalMentoring() {
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-brand-teal to-brand-orange text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-xl transition-all transform hover:scale-105 shadow-lg"
             >
-              Quero Minha Mentoria Emocional
+              Quero conhecer o método
             </a>
           </AnimatedSection>
         </div>
