@@ -50,7 +50,7 @@ const colorClasses = {
 
 export default function Pillars() {
   const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Vi os benefícios da Uni Languages e gostaria de agendar minha aula!";
+  const whatsappMessage = "Olá! Vi os benefícios da Uni Languages e gostaria saber como funcionam as aulas!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
