@@ -58,11 +58,27 @@ export default function Testimonials() {
                 <div className="flex items-center mb-6">
                   <div className="relative">
                     <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg">
-                      <img 
-                        src="/photo-1590650153855-d9e808231d41.jpeg" 
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover object-center"
-                      />
+                      {index === 0 && (
+                        <img 
+                          src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" 
+                          alt="Tamires C."
+                          className="w-full h-full object-cover object-center"
+                        />
+                      )}
+                      {index === 1 && (
+                        <img 
+                          src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" 
+                          alt="Munique F."
+                          className="w-full h-full object-cover object-center"
+                        />
+                      )}
+                      {index === 2 && (
+                        <img 
+                          src="/photo-1590650153855-d9e808231d41.jpeg" 
+                          alt="Paula Q."
+                          className="w-full h-full object-cover object-center"
+                        />
+                      )}
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-md">
                       <Star className="w-3 h-3 text-brand-yellow fill-current" />
