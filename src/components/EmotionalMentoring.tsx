@@ -76,7 +76,7 @@ export default function EmotionalMentoring() {
                   <Star className="h-10 w-10 text-brand-yellow" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                  Por que a mentoria emocional faz diferença?
+                  Por que a mentoria emocional nas aulas faz diferença?
                 </h3>
               </div>
 
