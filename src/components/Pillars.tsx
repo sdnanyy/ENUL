@@ -99,7 +99,7 @@ export default function Pillars() {
             className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
           >
             <MessageCircle className="h-5 w-5" />
-            <span>Agendar minha aula</span>
+            <span>Fale conosco</span>
           </a>
         </div>
       </div>
