@@ -3,7 +3,7 @@ import { Calendar, Gift, MessageCircle, CheckCircle, Clock, DollarSign, X } from
 
 export default function CTA() {
   const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Quero agendar minha aula e receber meu diagnóstico personalizado!";
+  const whatsappMessage = "Olá! Me identifiquei com a página e quero saber mais sobre as aulas de inglês!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -142,7 +142,7 @@ export default function CTA() {
             className="inline-flex items-center space-x-2 bg-white text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg mb-4"
           >
             <MessageCircle className="h-5 w-5" />
-            <span>Quero agendar minha aula agora!</span>
+            <span>Clique para se inscrever!</span>
           </a>
         </div>
 
