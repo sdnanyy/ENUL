@@ -55,24 +55,8 @@ export default function Hero() {
           <div className="relative">
             {/* Grid de fotos principais */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              {/* Mulher viajando */}
+              {/* Mulher em videoconferência */}
               <div className="bg-white rounded-2xl shadow-xl p-4 transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                <LazyImage
-                  src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
-                  alt="Mulher confiante apresentando em reunião"
-                  className="w-full h-40 sm:h-48 object-cover rounded-xl"
-                  width={400}
-                  height={300}
-                  quality={85}
-                />
-                <div className="text-center mt-3">
-                  <p className="text-sm font-semibold text-gray-800">Apresentações</p>
-                  <p className="text-xs text-gray-600">com confiança</p>
-                </div>
-              </div>
-
-              {/* Mulher trabalhando/videoconferência */}
-              <div className="bg-white rounded-2xl shadow-xl p-4 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                 <LazyImage
                   src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg"
                   alt="Mulher jovem em videoconferência profissional"
@@ -86,21 +70,37 @@ export default function Hero() {
                   <p className="text-xs text-gray-600">internacionais</p>
                 </div>
               </div>
+
+              {/* Mulher viajando */}
+              <div className="bg-white rounded-2xl shadow-xl p-4 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <LazyImage
+                  src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg"
+                  alt="Mulher jovem viajando e explorando o mundo"
+                  className="w-full h-40 sm:h-48 object-cover rounded-xl"
+                  width={400}
+                  height={300}
+                  quality={85}
+                />
+                <div className="text-center mt-3">
+                  <p className="text-sm font-semibold text-gray-800">Viagens</p>
+                  <p className="text-xs text-gray-600">pelo mundo</p>
+                </div>
+              </div>
             </div>
 
-            {/* Foto maior - Mulher apresentando/falando ao público */}
+            {/* Foto maior - Apresentações com confiança */}
             <div className="bg-white rounded-2xl shadow-xl p-4 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative">
               <LazyImage
-                src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg"
-                alt="Mulher jovem viajando e explorando o mundo"
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
+                alt="Mulher confiante apresentando em reunião"
                 className="w-full h-48 sm:h-56 object-cover rounded-xl"
                 width={600}
                 height={400}
                 quality={90}
               />
               <div className="text-center mt-3">
-                <p className="text-sm font-semibold text-gray-800">Viagens</p>
-                <p className="text-xs text-gray-600">pelo mundo</p>
+                <p className="text-sm font-semibold text-gray-800">Apresentações</p>
+                <p className="text-xs text-gray-600">com confiança</p>
               </div>
               
               {/* Badge de estatística */}
