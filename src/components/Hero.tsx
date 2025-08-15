@@ -4,7 +4,7 @@ import LazyImage from './LazyImage';
 
 export default function Hero() {
   const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Gostaria de agendar minha aula de inglês/espanhol.";
+  const whatsappMessage = "Olá! Gostaria saber mais sobre as aulas de inglês.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
