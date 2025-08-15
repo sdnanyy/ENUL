@@ -139,9 +139,10 @@ export default function CTA() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg mb-4"
+            className="inline-flex items-center space-x-2 bg-white text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg mb-4"
           >
-            Quero agendar minha aula agora!
+            <MessageCircle className="h-5 w-5" />
+            <span>Quero agendar minha aula agora!</span>
           </a>
         </div>
 

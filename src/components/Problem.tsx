@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle, MessageCircle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 export default function Problem() {
@@ -47,9 +47,10 @@ export default function Problem() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center space-x-2 bg-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg"
             >
-              Quero Resolver Isso Agora!
+              <MessageCircle className="h-5 w-5" />
+              <span>Quero Resolver Isso Agora!</span>
             </a>
           </AnimatedSection>
 
@@ -94,9 +95,10 @@ export default function Problem() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-brand-orange text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-colors"
+                  className="inline-flex items-center space-x-2 bg-brand-orange text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-colors"
                 >
-                  Começar Minha Transformação
+                  <MessageCircle className="h-4 w-4" />
+                  <span>Começar Minha Transformação</span>
                 </a>
               </div>
             </div>

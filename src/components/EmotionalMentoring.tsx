@@ -122,9 +122,10 @@ export default function EmotionalMentoring() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-brand-teal to-brand-orange text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-xl transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-teal to-brand-orange text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-xl transition-all transform hover:scale-105 shadow-lg"
             >
-              Quero conhecer o método
+              <MessageCircle className="h-5 w-5" />
+              <span>Quero conhecer o método</span>
             </a>
           </AnimatedSection>
         </div>

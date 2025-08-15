@@ -96,9 +96,10 @@ export default function Pillars() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
           >
-            Agendar minha aula
+            <MessageCircle className="h-5 w-5" />
+            <span>Agendar minha aula</span>
           </a>
         </div>
       </div>

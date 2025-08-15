@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Briefcase, GraduationCap, Globe } from 'lucide-react';
+import { Star, Briefcase, GraduationCap, Globe, MessageCircle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const testimonials = [
@@ -98,9 +98,10 @@ Agora é a sua vez de transformar o seu jeito de aprender!
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center space-x-2 bg-green-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
           >
-            Quero mudar minha história
+            <MessageCircle className="h-5 w-5" />
+            <span>Quero mudar minha história</span>
           </a>
         </div>
       </div>

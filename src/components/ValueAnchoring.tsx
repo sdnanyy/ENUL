@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Award, Users } from 'lucide-react';
+import { TrendingUp, Award, Users, MessageCircle } from 'lucide-react';
 
 export default function ValueAnchoring() {
   const whatsappNumber = "5511950816765";
@@ -58,9 +58,10 @@ export default function ValueAnchoring() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-brand-teal to-brand-orange text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-xl transition-all transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-teal to-brand-orange text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-xl transition-all transform hover:scale-105 shadow-lg"
           >
-            Quero Minha Transformação
+            <MessageCircle className="h-5 w-5" />
+            <span>Quero Minha Transformação</span>
           </a>
         </div>
       </div>
