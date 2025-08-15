@@ -60,16 +60,16 @@ export default function Testimonials() {
                     <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg">
                       {index === 0 && (
                         <img 
-                          src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" 
+                          src="/jovem-mulher-sendo-alegre.jpg" 
                           alt="Tamires C."
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-full object-cover object-top"
                         />
                       )}
                       {index === 1 && (
                         <img 
-                          src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" 
+                          src="/retrato-de-mulher-com-shampoo-de-cabelo-encaracolado.jpg" 
                           alt="Munique F."
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-full object-cover object-top"
                         />
                       )}
                       {index === 2 && (
