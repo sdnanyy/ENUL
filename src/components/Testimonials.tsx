@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
   const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Vi os depoimentos das alunas e quero ter a mesma experiência. Gostaria de agendar minha aula!";
+  const whatsappMessage = "Olá! Vi os depoimentos das alunas e quero ter a mesma experiência!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
