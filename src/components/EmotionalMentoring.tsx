@@ -41,7 +41,7 @@ export default function EmotionalMentoring() {
             </h2>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Mais do que ensinar inglês, cuidamos do seu bem-estar emocional durante toda a jornada de aprendizagem
+            Mais do que aulas de inglês, trabalhamos sua confiança e autoestima durante toda a jornada de aprendizagem
           </p>
         </AnimatedSection>
 
