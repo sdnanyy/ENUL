@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export default function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) {
   const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Gostaria de agendar minha aula de inglês.";
+  const whatsappMessage = "Olá! Gostaria de conversar sobre as aulas online de inglês.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
