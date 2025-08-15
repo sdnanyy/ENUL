@@ -81,7 +81,7 @@ export default function CTA() {
 
           <div className="flex items-center justify-center mb-6 mt-6 sm:mt-4">
             <Gift className="h-6 w-6 sm:h-8 sm:w-8 text-brand-yellow mr-2 sm:mr-3 flex-shrink-0" />
-            <span className="text-lg sm:text-2xl font-bold text-white text-center">OFERTA ESPECIAL - Plano Semestral</span>
+            <span className="text-lg sm:text-2xl font-bold text-white text-center">25% OFF - Plano Semestral</span>
           </div>
           
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
