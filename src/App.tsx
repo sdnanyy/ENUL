@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
+import EmotionalMentoring from './components/EmotionalMentoring';
 import Problem from './components/Problem';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
@@ -18,6 +19,7 @@ function App() {
       />
       <Hero />
       <Pillars />
+      <EmotionalMentoring />
       <Problem />
       <Testimonials />
       <CTA />
