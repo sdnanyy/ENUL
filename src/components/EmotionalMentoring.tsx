@@ -37,7 +37,7 @@ export default function EmotionalMentoring() {
           <div className="flex items-center justify-center mb-6">
             <Heart className="h-12 w-12 text-brand-teal mr-4" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-              Mentoria Emocional
+              Aulas particulares de inglês para mulheres que querem avançar na carreira
             </h2>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
