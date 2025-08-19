@@ -22,7 +22,7 @@ export default function Hero() {
  - e a gente te mostra como.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Com aulas online, personalizadas e professores que te entendem, você vai aprender inglês no seu ritmo – com confiança e leveza.
+              Com aulas online, personalizadas e práticas, você vai superar o medo de falar inglês. Tudo feito no seu ritmo – com confiança e leveza.
             </p>
             
             <div className="mb-8">
