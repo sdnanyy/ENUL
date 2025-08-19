@@ -11,8 +11,8 @@ const benefits = [
   },
   {
     icon: MessageCircle,
-    title: 'Comunicação real',
-    description: 'Foco na comunicação real com prática leve, correção gentil e zero julgamentos.',
+    title: 'Conversação real',
+    description: 'Foco na conversação real com prática leve, correção gentil e zero julgamentos.',
     color: 'yellow'
   },
   {
