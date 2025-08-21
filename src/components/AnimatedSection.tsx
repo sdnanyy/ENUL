@@ -41,6 +41,4 @@ const AnimatedSection = memo(function AnimatedSection({
     </div>
   );
 }
-);
-
-export default AnimatedSection;
+)
