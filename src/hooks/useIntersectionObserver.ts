@@ -6,23 +6,10 @@ interface UseIntersectionObserverOptions {
   triggerOnce?: boolean;
 }
 
-// Cache para observers reutilizáveis
-const observerCache = new Map<string, IntersectionObserver>();
-
-const getOrCreateObserver = (options: IntersectionObserverOptions, callback: IntersectionObserverCallback) => {
-  const key = `${options.threshold}-${options.rootMargin}`;
-  
-  if (!observerCache.has(key)) {
-    observerCache.set(key, new IntersectionObserver(callback, options));
-  }
-  
-  return observerCache.get(key)!;
-};
-
 export function useIntersectionObserver(
   options: UseIntersectionObserverOptions = {}
 ) {
-  const { threshold = 0.1, rootMargin = '50px', triggerOnce = true } = options;
+  const { threshold = 0.1, rootMargin = '0px', triggerOnce = true } = options;
   const [isIntersecting, setIsIntersecting] = useState(false);
   const targetRef = useRef<HTMLElement>(null);
 
@@ -30,20 +17,7 @@ export function useIntersectionObserver(
     const target = targetRef.current;
     if (!target) return;
 
-    const callback: IntersectionObserverCallback = (entries) => {
-      const [entry] = entries;
-      setIsIntersecting(entry.isIntersecting);
-      if (entry.isIntersecting && triggerOnce) {
-        observer.unobserve(target);
-      }
-    };
-
-    const observer = getOrCreateObserver(
-      { threshold, rootMargin },
-      callback
-    );
-
-    /* const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
         if (entry.isIntersecting && triggerOnce) {
@@ -51,7 +25,7 @@ export function useIntersectionObserver(
         }
       },
       { threshold, rootMargin }
-    ); */
+    );
 
     observer.observe(target);
 

@@ -1,4 +1,4 @@
-import React, { ReactNode, memo } from 'react';
+import React, { ReactNode } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface AnimatedSectionProps {
@@ -7,7 +7,7 @@ interface AnimatedSectionProps {
   animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight';
 }
 
-const AnimatedSection = memo(function AnimatedSection({ 
+export default function AnimatedSection({ 
   children, 
   className = '', 
   animation = 'fadeIn' 
@@ -35,10 +35,9 @@ const AnimatedSection = memo(function AnimatedSection({
   return (
     <div
       ref={targetRef}
-      className={`transition-all duration-500 ease-out will-change-transform ${animationClasses[animation]} ${className}`}
+      className={`transition-all duration-700 ease-out ${animationClasses[animation]} ${className}`}
     >
       {children}
     </div>
   );
 }
-)

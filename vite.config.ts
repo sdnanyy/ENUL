@@ -9,8 +9,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          icons: ['lucide-react'],
-          utils: ['src/utils/imageOptimization', 'src/hooks/useIntersectionObserver']
+          icons: ['lucide-react']
         }
       }
     },
@@ -20,12 +19,9 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+        drop_debugger: true
       }
-    },
-    chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 4096
+    }
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
@@ -35,8 +31,5 @@ export default defineConfig({
     hmr: {
       overlay: false
     }
-  },
-  esbuild: {
-    logOverride: { 'this-is-undefined-in-esm': 'silent' }
   }
 });
