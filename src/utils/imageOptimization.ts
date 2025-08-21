@@ -41,3 +41,4 @@ export const generatePlaceholder = (width: number, height: number, color = '#f3f
       <rect width="${width}" height="${height}" fill="${color}"/>
     </svg>`
   )}`;
+}

@@ -40,3 +40,5 @@ const AnimatedSection = memo(function AnimatedSection({
       {children}
     </div>
   );
+}
+)
