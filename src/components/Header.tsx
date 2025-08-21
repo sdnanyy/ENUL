@@ -20,6 +20,10 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProp
               src="/uni-languages-logo.png" 
               alt="Uni Languages" 
               className="h-10"
+              loading="eager"
+              decoding="sync"
+              width="120"
+              height="40"
             />
           </div>
           

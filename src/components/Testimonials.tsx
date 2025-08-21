@@ -63,6 +63,10 @@ export default function Testimonials() {
                           src="/jovem-mulher-sendo-alegre.jpg" 
                           alt="Tamires C."
                           className="w-full h-full object-cover object-top"
+                          loading="lazy"
+                          decoding="async"
+                          width="64"
+                          height="64"
                         />
                       )}
                       {index === 1 && (
@@ -70,6 +74,10 @@ export default function Testimonials() {
                           src="/retrato-de-mulher-com-shampoo-de-cabelo-encaracolado.jpg" 
                           alt="Munique F."
                           className="w-full h-full object-cover object-top"
+                          loading="lazy"
+                          decoding="async"
+                          width="64"
+                          height="64"
                         />
                       )}
                       {index === 2 && (
@@ -77,6 +85,10 @@ export default function Testimonials() {
                           src="/photo-1590650153855-d9e808231d41.jpeg" 
                           alt="Paula Q."
                           className="w-full h-full object-cover object-center"
+                          loading="lazy"
+                          decoding="async"
+                          width="64"
+                          height="64"
                         />
                       )}
                     </div>

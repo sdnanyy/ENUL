@@ -12,6 +12,10 @@ export default function Footer() {
                 src="/uni-languages-logo.png" 
                 alt="Uni Languages" 
                 className="h-10 sm:h-12 brightness-0 invert"
+                loading="lazy"
+                decoding="async"
+                width="120"
+                height="48"
               />
             </div>
             <p className="text-sm sm:text-base text-white/80 mb-6 leading-relaxed">

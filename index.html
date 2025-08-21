@@ -2,9 +2,17 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <!-- Preload critical resources -->
     <link rel="preload" href="/uni-languages-logo.png" as="image" />
+    <link rel="preload" href="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?w=400&h=300&auto=compress&cs=tinysrgb&dpr=1&fit=crop&q=85" as="image" />
+    <link rel="preload" href="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?w=400&h=300&auto=compress&cs=tinysrgb&dpr=1&fit=crop&q=85" as="image" />
+    <link rel="preload" href="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?w=600&h=400&auto=compress&cs=tinysrgb&dpr=1&fit=crop&q=90" as="image" />
+    
+    <!-- DNS prefetch for external domains -->
     <link rel="dns-prefetch" href="//images.pexels.com" />
+    <link rel="dns-prefetch" href="//wa.me" />
     <link rel="preconnect" href="//images.pexels.com" crossorigin />
+    
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b545b" />
@@ -14,10 +22,32 @@
     <meta property="og:title" content="Uni Languages - Fale Inglês e Espanhol com Confiança" />
     <meta property="og:description" content="Supere a insegurança e fale inglês e espanhol com confiança. Aulas personalizadas online para mulheres." />
     <meta property="og:type" content="website" />
+    
+    <!-- Performance hints -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
     <style>
       /* Critical CSS para evitar FOUC */
-      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      body { 
+        margin: 0; 
+        font-family: system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeSpeed;
+      }
       .loading { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+      
+      /* Prevent layout shift */
+      img { max-width: 100%; height: auto; }
+      
+      /* Optimize animations */
+      * {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+      }
     </style>
   </head>
   <body>
@@ -29,6 +59,6 @@
     <style>
       @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>

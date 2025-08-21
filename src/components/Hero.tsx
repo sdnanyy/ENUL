@@ -65,6 +65,8 @@ export default function Hero() {
                   width={400}
                   height={300}
                   quality={85}
+                  priority={true}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                 />
                 <div className="text-center mt-3">
                   <p className="text-sm font-semibold text-gray-800">Reuniões</p>
@@ -81,6 +83,8 @@ export default function Hero() {
                   width={400}
                   height={300}
                   quality={85}
+                  priority={true}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                 />
                 <div className="text-center mt-3">
                   <p className="text-sm font-semibold text-gray-800">Viagens</p>
@@ -98,6 +102,8 @@ export default function Hero() {
                 width={600}
                 height={400}
                 quality={90}
+                priority={true}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
               />
               <div className="text-center mt-3">
                 <p className="text-sm font-semibold text-gray-800">Apresentações</p>
@@ -122,6 +128,7 @@ export default function Hero() {
                   width={300}
                   height={200}
                   quality={80}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 15vw"
                 />
                 <div className="text-center mt-2">
                   <p className="text-xs font-semibold text-gray-800">Carreira</p>
@@ -137,6 +144,7 @@ export default function Hero() {
                   width={300}
                   height={200}
                   quality={80}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 15vw"
                 />
                 <div className="text-center mt-2">
                   <p className="text-xs font-semibold text-gray-800">Aprendizado</p>
