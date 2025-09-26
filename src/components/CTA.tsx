@@ -1,7 +1,11 @@
 import React from 'react';
 import { Calendar, Gift, MessageCircle, CheckCircle, Clock, DollarSign, X } from 'lucide-react';
 
-export default function CTA() {
+interface CTAProps {
+  onOpenContactForm: () => void;
+}
+
+export default function CTA({ onOpenContactForm }: CTAProps) {
   const whatsappNumber = "5511950816765";
   const whatsappMessage = "Olá! Me identifiquei com a página e quero saber mais sobre as aulas de inglês!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -135,6 +139,13 @@ export default function CTA() {
 
         {/* Botão CTA */}
         <div className="text-center">
+          <button
+            onClick={onOpenContactForm}
+            className="inline-flex items-center space-x-2 bg-brand-yellow text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-brand-orange-light hover:text-white transition-all transform hover:scale-105 shadow-lg mb-4 mr-4"
+          >
+            <Gift className="h-5 w-5" />
+            <span>Ganhar presente grátis!</span>
+          </button>
           <a 
             href={whatsappUrl}
             target="_blank"
