@@ -63,7 +63,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               Cadastre-se para receber seu presente
             </h2>
             <p className="text-white/90">
-              Preencha seus dados e ganhe um ebook exclusivo sobre conversação em inglês!
+              Preencha seus dados e ganhe uma aula totalmente gratuita!
             </p>
           </div>
         </div>
@@ -165,10 +165,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 Obrigada pelo seu cadastro!
               </h3>
               <p className="text-gray-600 mb-4">
-                Seu ebook exclusivo será enviado para o seu e-mail em alguns minutos.
+                Entraremos em contato para agendar sua aula exclusiva!
               </p>
               <p className="text-sm text-gray-500">
-                Verifique também sua caixa de spam.
+                
               </p>
             </div>
           )}
