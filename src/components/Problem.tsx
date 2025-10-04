@@ -94,7 +94,7 @@ export default function Problem({ onOpenContactForm }: ProblemProps) {
                   onClick={onOpenContactForm}
                   className="inline-flex items-center space-x-2 bg-brand-orange text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-colors"
                 >
-                  <className="h-4 w-4" />
+                  <Gift className="h-4 w-4" />
                   <span>Comece sua jornada em inglês agora!</span>
                 </button>
               </div>
