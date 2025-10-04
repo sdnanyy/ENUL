@@ -146,7 +146,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 ) : (
                   <>
                     <Send className="h-5 w-5" />
-                    <span>Enviar!</span>
+                    <span>Enviar</span>
                   </>
                 )}
               </button>
