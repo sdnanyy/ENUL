@@ -25,7 +25,7 @@ function App() {
         onClose={() => setContactFormOpen(false)} 
       />
       <Hero />
-      <Problem />
+      <Problem onOpenContactForm={() => setContactFormOpen(true)} />
       <EmotionalMentoring />
       <Testimonials />
       <Pillars />

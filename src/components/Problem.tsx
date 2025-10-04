@@ -1,11 +1,12 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle, MessageCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Gift } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-export default function Problem() {
-  const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Me identifiquei com os problemas apresentados e quero conhecer a solução da Uni Languages!";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+interface ProblemProps {
+  onOpenContactForm: () => void;
+}
+
+export default function Problem({ onOpenContactForm }: ProblemProps) {
 
   return (
     <section id="solucao" className="py-20 bg-white">
@@ -43,15 +44,13 @@ export default function Problem() {
               </div>
             </div>
 
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={onOpenContactForm}
               className="inline-flex items-center space-x-2 bg-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg"
             >
-              <MessageCircle className="h-5 w-5" />
-              <span>Quero Resolver Isso Agora!</span>
-            </a>
+              <Gift className="h-5 w-5" />
+              <span>Ganhar Aula Grátis Agora!</span>
+            </button>
           </AnimatedSection>
 
           <AnimatedSection animation="slideLeft" className="bg-gradient-to-br from-brand-yellow/10 to-brand-orange-light/10 rounded-3xl p-6 sm:p-8 mt-8 lg:mt-0">
@@ -88,18 +87,16 @@ export default function Problem() {
 
             <div className="mt-8 p-6 bg-white rounded-xl">
               <p className="text-center text-base sm:text-lg font-semibold text-gray-900 mb-4 leading-relaxed">
-                "Em 3 meses, você vai se surpreender com seu progresso!"
+                "Cadastre-se e ganhe sua primeira aula totalmente grátis!"
               </p>
               <div className="text-center">
-                <a 
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={onOpenContactForm}
                   className="inline-flex items-center space-x-2 bg-brand-orange text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-colors"
                 >
-                  <MessageCircle className="h-4 w-4" />
-                  <span>Começar Minha Transformação</span>
-                </a>
+                  <Gift className="h-4 w-4" />
+                  <span>Preencher Dados e Ganhar Aula</span>
+                </button>
               </div>
             </div>
           </AnimatedSection>
