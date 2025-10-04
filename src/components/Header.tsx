@@ -30,7 +30,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen, onOpenContac
               className="flex items-center space-x-2 bg-brand-yellow text-brand-teal px-4 py-2 rounded-full hover:bg-brand-orange-light hover:text-white transition-colors font-semibold"
             >
               <Gift className="h-4 w-4" />
-              <span>Ganhe seu presente</span>
+              <span>Temos um presente para você!</span>
             </button>
             <a 
               href={whatsappUrl}
