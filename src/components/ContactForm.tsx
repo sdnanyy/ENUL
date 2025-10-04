@@ -60,10 +60,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               <Gift className="h-8 w-8" />
             </div>
             <h2 className="text-2xl font-bold mb-2">
-              Cadastre-se e ganhe sua aula grátis
+              Cadastre-se e ganhe sua primeira grátis
             </h2>
             <p className="text-white/90">
-              Preencha seus dados abaixo e receba sua primeira aula de inglês totalmente gratuita!
+              Preencha seus dados abaixo e nós entraremos em contato para agendar sua aula gratuita!
             </p>
           </div>
         </div>
