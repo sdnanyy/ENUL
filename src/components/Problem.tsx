@@ -87,7 +87,7 @@ export default function Problem({ onOpenContactForm }: ProblemProps) {
 
             <div className="mt-8 p-6 bg-white rounded-xl">
               <p className="text-center text-base sm:text-lg font-semibold text-gray-900 mb-4 leading-relaxed">
-                "Cadastre-se e ganhe sua primeira aula totalmente grátis!"
+                "Quero experimentar uma aula!"
               </p>
               <div className="text-center">
                 <button
@@ -95,7 +95,7 @@ export default function Problem({ onOpenContactForm }: ProblemProps) {
                   className="inline-flex items-center space-x-2 bg-brand-orange text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-colors"
                 >
                   <Gift className="h-4 w-4" />
-                  <span>Preencher Dados e Ganhar Aula</span>
+                  <span>Comece sua jornada em inglês agora!</span>
                 </button>
               </div>
             </div>
