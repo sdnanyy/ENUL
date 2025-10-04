@@ -141,20 +141,10 @@ export default function CTA({ onOpenContactForm }: CTAProps) {
         <div className="text-center">
           <button
             onClick={onOpenContactForm}
-            className="inline-flex items-center space-x-2 bg-brand-yellow text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-brand-orange-light hover:text-white transition-all transform hover:scale-105 shadow-lg mb-4 mr-4"
+            className="bg-white text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
           >
-            <Gift className="h-5 w-5" />
-            <span>Ganhar presente grátis!</span>
+            Clique para se inscrever!
           </button>
-          <a 
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-white text-brand-teal px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg mb-4"
-          >
-            <MessageCircle className="h-5 w-5" />
-            <span>Clique para se inscrever!</span>
-          </a>
         </div>
 
       </div>
