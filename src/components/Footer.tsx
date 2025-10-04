@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
             <p className="text-sm sm:text-base text-white/80 mb-6 leading-relaxed">
               Transformamos a insegurança em confiança. Ajudamos mulheres a se expressarem 
-              naturalmente em inglês por meio de aulas personalizadas e acolhedoras.
+              naturalmente em inglês por meio de aulas particulares, personalizadas e acolhedoras.
             </p>
           </div>
 
