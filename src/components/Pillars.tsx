@@ -5,14 +5,14 @@ import AnimatedSection from './AnimatedSection';
 const benefits = [
   {
     icon: Clock,
-    title: 'Aulas no seu ritmo',
+    title: 'Aulas de inglês no seu ritmo',
     description: 'Aprenda com personalização total — respeitando sua rotina, seu jeito e seu tempo.',
     color: 'teal'
   },
   {
     icon: MessageCircle,
     title: 'Conversação real',
-    description: 'Foco na conversação real com prática leve, correção gentil e zero julgamentos.',
+    description: 'Aulas de conversação real com prática leve, correção gentil e zero julgamentos. Aqui você não precisa ter medo de treinar inglês.',
     color: 'yellow'
   },
   {
