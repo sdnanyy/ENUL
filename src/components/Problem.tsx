@@ -87,7 +87,7 @@ export default function Problem({ onOpenContactForm }: ProblemProps) {
 
             <div className="mt-8 p-6 bg-white rounded-xl">
               <p className="text-center text-base sm:text-lg font-semibold text-gray-900 mb-4 leading-relaxed">
-                "Quero experimentar uma aula!"
+                "Em 3 meses, você vai se surpreender com seu progresso!"
               </p>
               <div className="text-center">
                 <button
