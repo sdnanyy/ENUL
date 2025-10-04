@@ -25,7 +25,10 @@ export default function Footer() {
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-white/80">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-brand-yellow" />
-                <span>institutounilanguages@gmail.com</span>
+                <span className="flex items-center space-x-2">
+                  <Mail className="h-4 w-4" />
+                  <span>institutounilanguages@gmail.com</span>
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-brand-yellow" />
