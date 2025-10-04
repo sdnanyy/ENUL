@@ -27,7 +27,7 @@ function App() {
       <Hero />
       <Problem onOpenContactForm={() => setContactFormOpen(true)} />
       <EmotionalMentoring onOpenContactForm={() => setContactFormOpen(true)} />
-      <Testimonials />
+      <Testimonials onOpenContactForm={() => setContactFormOpen(true)} />
       <Pillars />
       <CTA onOpenContactForm={() => setContactFormOpen(true)} />
       <Footer />

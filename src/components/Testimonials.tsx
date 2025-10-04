@@ -29,7 +29,7 @@ const testimonials = [
   }
 ];
 
-export default function Testimonials() {
+export default function Testimonials({ onOpenContactForm }: { onOpenContactForm: () => void }) {
   const whatsappNumber = "5511950816765";
   const whatsappMessage = "Olá! Vi os depoimentos das alunas e quero ter a mesma experiência!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -110,15 +110,13 @@ export default function Testimonials() {
 
 Agora é a sua vez de transformar o seu jeito de aprender! 
           </p>
-          <a 
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={onOpenContactForm}
             className="inline-flex items-center space-x-2 bg-green-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-green-600 transition-all transform hover:scale-105 shadow-lg"
           >
             <MessageCircle className="h-5 w-5" />
             <span>Quero mudar minha história</span>
-          </a>
+          </button>
         </div>
       </div>
     </section>
