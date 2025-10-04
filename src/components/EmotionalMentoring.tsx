@@ -2,11 +2,11 @@ import React from 'react';
 import { Heart, Shield, Users, MessageCircle, CheckCircle, Star } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-export default function EmotionalMentoring() {
-  const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Quero conhecer mais sobre o método da Uni Languages!";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+interface EmotionalMentoringProps {
+  onOpenContactForm: () => void;
+}
 
+export default function EmotionalMentoring({ onOpenContactForm }: EmotionalMentoringProps) {
   const mentoringFeatures = [
     {
       icon: Heart,
@@ -118,15 +118,13 @@ export default function EmotionalMentoring() {
             <p className="text-lg sm:text-xl text-gray-700 mb-6 font-medium">
               Pronta para transformar seu jeito de falar inglês?
             </p>
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={onOpenContactForm}
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-teal to-brand-orange text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-xl transition-all transform hover:scale-105 shadow-lg"
             >
               <MessageCircle className="h-5 w-5" />
               <span>Quero conhecer o método</span>
-            </a>
+            </button>
           </AnimatedSection>
         </div>
       </div>
