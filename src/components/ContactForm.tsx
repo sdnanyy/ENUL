@@ -29,7 +29,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Enviar dados para o webhook
-      const response = await fetch('http://localhost:5678/webhook/recebeleads', {
+      const webhookUrl = import.meta.env.VITE_WEBHOOK_URL || 'http://localhost:5678/webhook/recebeleads';
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +58,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       }
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
-      alert('Erro ao enviar formulário. Tente novamente ou entre em contato pelo WhatsApp.');
+      alert('Erro ao enviar formulário. Verifique se o serviço está rodando ou entre em contato pelo WhatsApp.');
     } finally {
       setIsSubmitting(false);
     }
