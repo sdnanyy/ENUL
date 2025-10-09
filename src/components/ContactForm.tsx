@@ -27,18 +27,40 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simular envio do formulário
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      // Enviar dados para o webhook
+      const response = await fetch('https://unilanguages.app.n8n.cloud/webhook-test/recebeleads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          source: 'landing_page_contact_form',
+          timestamp: new Date().toISOString()
+        })
+      });
 
-    // Fechar o modal após 2 segundos
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', phone: '' });
-      onClose();
-    }, 2000);
+      if (response.ok) {
+        setIsSubmitted(true);
+        
+        // Fechar o modal após 3 segundos
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', phone: '' });
+          onClose();
+        }, 3000);
+      } else {
+        throw new Error('Erro ao enviar formulário');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      alert('Erro ao enviar formulário. Tente novamente ou entre em contato pelo WhatsApp.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) return null;
