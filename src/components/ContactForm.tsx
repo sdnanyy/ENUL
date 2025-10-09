@@ -29,7 +29,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Enviar dados para o webhook
-      const response = await fetch('https://unilanguages.app.n8n.cloud/webhook/recebeleads', {
+      const response = await fetch('http://localhost:5678/webhook/recebeleads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
