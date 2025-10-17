@@ -96,28 +96,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       setIsSubmitting(false);
     }
   };
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          source: 'landing_page_contact_form',
-          timestamp: new Date().toISOString()
-        });
-        
-        setIsSubmitted(true);
-        
-        // Fechar o modal após 3 segundos
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({ name: '', email: '', phone: '' });
-          onClose();
-        }, 3000);
-      }
-    } catch (error) {
-      console.error('Erro inesperado:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   if (!isOpen) return null;
 
