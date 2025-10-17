@@ -29,7 +29,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Integração JavaScript - Enviar dados para o webhook
-      const webhookUrl = 'http://localhost:5678/webhook/recebeleads';
+      const webhookUrl = '/api/webhook/recebeleads';
       
       // Dados do formulário para envio
       const formPayload = {
