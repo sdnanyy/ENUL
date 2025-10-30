@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MessageCircle, Star, Users } from 'lucide-react';
 import LazyImage from './LazyImage';
 

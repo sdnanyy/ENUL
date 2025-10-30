@@ -1,5 +1,4 @@
-import React from 'react';
-import { Star, Briefcase, GraduationCap, Globe, MessageCircle } from 'lucide-react';
+import { Star, Briefcase, GraduationCap, Globe } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const testimonials = [
@@ -30,10 +29,6 @@ const testimonials = [
 ];
 
 export default function Testimonials({ onOpenContactForm }: { onOpenContactForm: () => void }) {
-  const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Vi os depoimentos das alunas e quero ter a mesma experiência!";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
   return (
     <section id="depoimentos" className="py-20 bg-gradient-to-br from-brand-yellow/10 to-brand-orange-light/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +43,6 @@ export default function Testimonials({ onOpenContactForm }: { onOpenContactForm:
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
           {testimonials.map((testimonial, index) => {
-            const IconComponent = testimonial.icon;
             return (
               <AnimatedSection
                 key={index}

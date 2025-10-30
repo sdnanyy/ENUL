@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X, Gift, User, Mail, Phone, Send } from 'lucide-react';
 
 interface ContactFormProps {

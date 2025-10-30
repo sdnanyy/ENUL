@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { AlertTriangle, CheckCircle, Gift } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 

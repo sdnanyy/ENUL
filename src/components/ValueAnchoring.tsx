@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { TrendingUp, Award, Users, MessageCircle } from 'lucide-react';
 
 export default function ValueAnchoring() {

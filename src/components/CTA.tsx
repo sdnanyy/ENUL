@@ -1,15 +1,10 @@
-import React from 'react';
-import { Calendar, Gift, MessageCircle, CheckCircle, Clock, DollarSign, X } from 'lucide-react';
+import { Gift, CheckCircle, Clock, X } from 'lucide-react';
 
 interface CTAProps {
   onOpenContactForm: () => void;
 }
 
 export default function CTA({ onOpenContactForm }: CTAProps) {
-  const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Me identifiquei com a página e quero saber mais sobre as aulas de inglês!";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
   return (
     <section className="py-20 bg-gradient-to-r from-brand-teal to-brand-orange">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { getOptimizedImageUrl, generatePlaceholder } from '../utils/imageOptimization';
 
 interface LazyImageProps {

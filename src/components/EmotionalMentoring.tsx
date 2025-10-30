@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Heart, Shield, Users, MessageCircle, CheckCircle, Star } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 

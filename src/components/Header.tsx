@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Menu, X, MessageCircle, Gift } from 'lucide-react';
 
 interface HeaderProps {

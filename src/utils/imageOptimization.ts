@@ -1,6 +1,6 @@
 // Utility functions for image optimization
 
-export const getOptimizedImageUrl = (url: string, width?: number, height?: number, quality = 80) => {
+export const getOptimizedImageUrl = (url: string, width?: number, height?: number, _quality = 80) => {
   // For Pexels images, we can add query parameters for optimization
   if (url.includes('pexels.com')) {
     const urlObj = new URL(url);
