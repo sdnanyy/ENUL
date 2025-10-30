@@ -1,0 +1,29 @@
+import React from 'react';
+
+interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+  // O componente Hero passa 'src', 'alt', 'className', 'width', e 'height'
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+}
+
+const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className, width, height, ...props }) => {
+  // Implementação simples: apenas renderiza a imagem.
+  // Em uma aplicação real, teria lógica de carregamento lento (lazy loading).
+  // Para fins de correção de erro de importação, esta versão básica é suficiente.
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      width={width}
+      height={height}
+      loading="lazy"
+      {...props}
+    />
+  );
+};
+
+export default LazyImage;

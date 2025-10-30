@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import ContactForm from './components/ContactForm';
-import Hero from './components/Hero';
+import HeroSection from './components/HeroSection'; // Importando o novo componente HeroSection
 import Pillars from './components/Pillars';
 import EmotionalMentoring from './components/EmotionalMentoring';
 import Problem from './components/Problem';
@@ -15,16 +15,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header 
-        mobileMenuOpen={mobileMenuOpen} 
-        setMobileMenuOpen={setMobileMenuOpen} 
+      <Header
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
         onOpenContactForm={() => setContactFormOpen(true)}
       />
-      <ContactForm 
-        isOpen={contactFormOpen} 
-        onClose={() => setContactFormOpen(false)} 
+      <ContactForm
+        isOpen={contactFormOpen}
+        onClose={() => setContactFormOpen(false)}
       />
-      <Hero />
+      <HeroSection onOpenContactForm={() => setContactFormOpen(true)} /> {/* Usando o novo HeroSection */}
       <Problem onOpenContactForm={() => setContactFormOpen(true)} />
       <EmotionalMentoring onOpenContactForm={() => setContactFormOpen(true)} />
       <Testimonials onOpenContactForm={() => setContactFormOpen(true)} />
