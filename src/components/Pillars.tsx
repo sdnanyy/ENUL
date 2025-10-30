@@ -1,10 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom'; // Importando o componente Link para navegação interna
 
 const Pillars = () => {
-  // A variável whatsappUrl pode se tornar não utilizada se não for usada em outro lugar.
-  // Não a removeremos, pois não foi solicitado.
-  const whatsappUrl = "https://wa.me/1234567890"; // Exemplo de URL, pode ser diferente no seu código
+  // A variável whatsappUrl foi removida pois não é mais utilizada.
 
   return (
     <section className="py-16 bg-gray-50">
@@ -37,11 +34,11 @@ const Pillars = () => {
           <p className="text-lg text-gray-800 mb-6">
             Pronto para começar sua jornada bilíngue?
           </p>
-          <Link // Alterado de <a> para <Link>
-            to="/register" // Novo destino para o formulário de cadastro
+          <Link
+            to="/register"
             className="bg-brand-teal text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-brand-teal/90 transition-colors duration-300"
           >
-            Inscreva-se Agora {/* Novo texto do botão */}
+            Inscreva-se Agora
           </Link>
         </div>
       </div>
