@@ -1,11 +1,10 @@
-import { ChevronRight } from 'lucide-react'; // Mantido caso haja outros usos de ChevronRight no futuro
+import { MessageCircle, Users, Star } from 'lucide-react'; // Importando apenas os ícones utilizados
+import LazyImage from './LazyImage'; // Importando LazyImage
 
-interface HeroSectionProps {
-  onOpenContactForm: () => void;
-}
-
-const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContactForm }) => {
-  // A variável whatsappUrl foi removida pois não é mais utilizada.
+const HeroSection = () => { // Removendo HeroSectionProps e onOpenContactForm
+  const whatsappNumber = "5511950816765";
+  const whatsappMessage = "Olá! Quero saber mais sobre as aulas de inglês da Uni Languages!";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section className="pt-24 pb-12 bg-gradient-to-br from-brand-yellow/10 via-white to-brand-orange-light/10">
@@ -149,3 +148,5 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContactForm }) => {
     </section>
   );
 }
+
+export default HeroSection;
