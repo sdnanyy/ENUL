@@ -5,14 +5,18 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
+    port: 8080,
     proxy: {
       '/api/webhook': {
         target: 'http://localhost:5678',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/webhook/, '/webhook')
       }
+    },
+    hmr: {
+      overlay: false
     }
-  }
+  },
   build: {
     rollupOptions: {
       output: {
@@ -34,10 +38,5 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom']
-  },
-  server: {
-    hmr: {
-      overlay: false
-    }
   }
 });
