@@ -1,6 +1,6 @@
-import { Button } from "../components/ui/button";
 import LazyImage from "./LazyImage";
 import AnimatedSection from "./AnimatedSection";
+import { Button } from "./ui/button";
 import heroImage from '../assets/hero-image.jpg';
 
 const Hero = () => {
