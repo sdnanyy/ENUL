@@ -1,135 +1,151 @@
-import LazyImage from "./LazyImage";
-import AnimatedSection from "./AnimatedSection";
-import { Users, Star, MessageCircle } from 'lucide-react';
+import React from 'react';
+import { MessageCircle, Star, Users } from 'lucide-react';
+import LazyImage from './LazyImage';
 
-interface HeroSectionProps {
-  onOpenContactForm: () => void;
-}
+export default function Hero() {
+  const whatsappNumber = "5511950816765";
+  const whatsappMessage = "Olá! Gostaria saber mais sobre as aulas de inglês.";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-const HeroSection = ({ onOpenContactForm }: HeroSectionProps) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white to-brand-yellow/5 py-20 pt-32 sm:pt-40 lg:pt-48">
+    <section className="pt-24 pb-12 bg-gradient-to-br from-brand-yellow/10 via-white to-brand-orange-light/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Coluna Esquerda: Conteúdo de Texto */}
-          <AnimatedSection animation="slideRight">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Você merece se sentir segura falando <span className="bg-brand-teal text-white px-3 py-1 rounded-lg inline-block">inglês</span> - e a gente te mostra como.
+          <div className="text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              Você merece se sentir segura falando{' '}
+              <span className="relative inline-block">
+                <span className="text-brand-teal bg-brand-teal/10 px-1 sm:px-2 py-1 rounded-lg border-2 border-brand-teal/20 shadow-sm">
+                  inglês
+                </span>
+              </span>{' '}
+ - e a gente te mostra como.
             </h1>
-            <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-lg">
-              Com aulas online, personalizadas e práticas, você vai superar o medo de falar inglês. Aulas feitas no seu ritmo - com confiança e leveza.
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+              Com aulas online, personalizadas e práticas, você vai superar o medo de falar inglês. Aulas feitas no seu ritmo – com confiança e leveza.
             </p>
-            <button
-              onClick={onOpenContactForm}
-              className="bg-brand-orange text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg mb-8"
-            >
-              Quero saber mais
-            </button>
+            
+            <div className="mb-8">
+              <a 
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
+              >
+                <MessageCircle className="h-5 w-5" />
+                <span>Quero saber mais</span>
+              </a>
+            </div>
 
-            {/* Prova Social */}
-            <div className="flex flex-wrap gap-6 sm:gap-8">
-              <div className="flex items-center space-x-2 text-gray-700">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
+              <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-brand-teal" />
-                <span className="font-semibold">+200 alunas</span>
+                <span>+200 alunas</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-700">
-                <Star className="h-5 w-5 text-brand-yellow fill-current" />
-                <span className="font-semibold">4.8/5 avaliação</span>
+              <div className="flex items-center space-x-2">
+                <Star className="h-5 w-5 text-brand-yellow" />
+                <span>4.9/5 avaliação</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-700">
-                <MessageCircle className="h-5 w-5 text-brand-orange" />
-                <span className="font-semibold">Foco na fala</span>
+              <div className="flex items-center space-x-2">
+                <MessageCircle className="h-5 w-5 text-brand-teal" />
+                <span>Foco na fala</span>
               </div>
             </div>
-          </AnimatedSection>
+          </div>
 
-          {/* Coluna Direita: Blocos Visuais (Cards) - Layout para Desktop/Tablet */}
-          <AnimatedSection animation="slideLeft" className="relative h-[500px] hidden lg:block">
-            {/* Card 1: Reuniões (Canto Superior Direito) */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 w-72 absolute top-0 right-0">
-              <LazyImage
-                src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1"
-                alt="Mulher em reunião de trabalho"
-                className="rounded-xl mb-3 h-36 w-full object-cover"
-                width={400}
-                height={250}
-              />
-              <p className="font-semibold text-gray-800 text-center">Reuniões</p>
-            </div>
-
-            {/* Card 2: Viagens pelo mundo (Meio Esquerda) */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 w-72 absolute top-1/3 left-0 z-10">
-              <LazyImage
-                src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1"
-                alt="Pessoa viajando pelo mundo"
-                className="rounded-xl mb-3 h-36 w-full object-cover"
-                width={400}
-                height={250}
-              />
-              <p className="font-semibold text-gray-800 text-center">Viagens pelo mundo</p>
-            </div>
-
-            {/* Card 3: Apresentações com confiança (Canto Inferior Direito, com selo) */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 w-72 relative absolute bottom-0 right-1/4">
-              <div className="absolute -top-4 -right-4 bg-brand-teal text-white px-3 py-1 rounded-full text-xs font-bold shadow-md rotate-3">
-                95% das alunas ganham confiança
+          <div className="relative">
+            {/* Grid de fotos principais */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              {/* Mulher em videoconferência */}
+              <div className="bg-white rounded-2xl shadow-xl p-4 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <LazyImage
+                  src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg"
+                  alt="Mulher jovem em videoconferência profissional"
+                  className="w-full h-40 sm:h-48 object-cover rounded-xl"
+                  width={400}
+                  height={300}
+                  quality={85}
+                />
+                <div className="text-center mt-3">
+                  <p className="text-sm font-semibold text-gray-800">Reuniões</p>
+                  <p className="text-xs text-gray-600">internacionais</p>
+                </div>
               </div>
-              <LazyImage
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1"
-                alt="Mulher fazendo apresentação com confiança"
-                className="rounded-xl mb-3 h-36 w-full object-cover"
-                width={400}
-                height={250}
-              />
-              <p className="font-semibold text-gray-800 text-center">Apresentações com confiança</p>
-            </div>
-          </AnimatedSection>
 
-          {/* Coluna Direita: Blocos Visuais (Cards) - Layout para Mobile (empilhado) */}
-          <div className="lg:hidden flex flex-col items-center space-y-6 mt-12">
-            {/* Card 1: Reuniões */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 w-full max-w-xs">
-              <LazyImage
-                src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1"
-                alt="Mulher em reunião de trabalho"
-                className="rounded-xl mb-3 h-40 w-full object-cover"
-                width={400}
-                height={250}
-              />
-              <p className="font-semibold text-gray-800 text-center">Reuniões</p>
-            </div>
-
-            {/* Card 2: Viagens pelo mundo */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 w-full max-w-xs">
-              <LazyImage
-                src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1"
-                alt="Pessoa viajando pelo mundo"
-                className="rounded-xl mb-3 h-40 w-full object-cover"
-                width={400}
-                height={250}
-              />
-              <p className="font-semibold text-gray-800 text-center">Viagens pelo mundo</p>
-            </div>
-
-            {/* Card 3: Apresentações com confiança (com selo) */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 w-full max-w-xs relative">
-              <div className="absolute -top-4 -right-4 bg-brand-teal text-white px-3 py-1 rounded-full text-xs font-bold shadow-md rotate-3">
-                95% das alunas ganham confiança
+              {/* Mulher viajando */}
+              <div className="bg-white rounded-2xl shadow-xl p-4 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <LazyImage
+                  src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg"
+                  alt="Mulher jovem viajando e explorando o mundo"
+                  className="w-full h-40 sm:h-48 object-cover rounded-xl"
+                  width={400}
+                  height={300}
+                  quality={85}
+                />
+                <div className="text-center mt-3">
+                  <p className="text-sm font-semibold text-gray-800">Viagens</p>
+                  <p className="text-xs text-gray-600">pelo mundo</p>
+                </div>
               </div>
+            </div>
+
+            {/* Foto maior - Apresentações com confiança */}
+            <div className="bg-white rounded-2xl shadow-xl p-4 transform rotate-1 hover:rotate-0 transition-transform duration-300 relative">
               <LazyImage
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1"
-                alt="Mulher fazendo apresentação com confiança"
-                className="rounded-xl mb-3 h-40 w-full object-cover"
-                width={400}
-                height={250}
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
+                alt="Mulher confiante apresentando em reunião"
+                className="w-full h-48 sm:h-56 object-cover rounded-xl"
+                width={600}
+                height={400}
+                quality={90}
               />
-              <p className="font-semibold text-gray-800 text-center">Apresentações com confiança</p>
+              <div className="text-center mt-3">
+                <p className="text-sm font-semibold text-gray-800">Apresentações</p>
+                <p className="text-xs text-gray-600">com confiança</p>
+              </div>
+              
+              {/* Badge de estatística */}
+              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-brand-teal text-white p-2 sm:p-3 rounded-xl shadow-lg">
+                <div className="text-lg sm:text-2xl font-bold">95%</div>
+                <div className="text-xs sm:text-sm">das alunas ganham confiança</div>
+              </div>
+            </div>
+
+            {/* Fotos menores adicionais */}
+            <div className="grid grid-cols-2 gap-4 mt-4 hidden sm:grid">
+              {/* Mulher em ambiente de trabalho */}
+              <div className="bg-white rounded-xl shadow-lg p-3 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                <LazyImage
+                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+                  alt="Mulher profissional confiante"
+                  className="w-full h-32 object-cover rounded-lg"
+                  width={300}
+                  height={200}
+                  quality={80}
+                />
+                <div className="text-center mt-2">
+                  <p className="text-xs font-semibold text-gray-800">Carreira</p>
+                </div>
+              </div>
+
+              {/* Mulher estudando/aprendendo */}
+              <div className="bg-white rounded-xl shadow-lg p-3 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <LazyImage
+                  src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg"
+                  alt="Mulher jovem estudando idiomas"
+                  className="w-full h-32 object-cover rounded-lg"
+                  width={300}
+                  height={200}
+                  quality={80}
+                />
+                <div className="text-center mt-2">
+                  <p className="text-xs font-semibold text-gray-800">Aprendizado</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
