@@ -28,10 +28,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setIsSubmitting(true);
 
     try {
-      // Integração JavaScript - Enviar dados para o webhook
       const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbx6-qMFnHQnL69QJlsavVPPAhQ0Cq5T-U1V6osiEAdCANfLicmWRdsHsdSLBIz6uEE-/exec';
       
-      // Dados do formulário para envio
       const formPayload = {
         name: formData.name,
         email: formData.email,
@@ -42,23 +40,19 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
       console.log('Enviando dados para webhook:', formPayload);
 
-      // Para Google Apps Script, geralmente é um GET com parâmetros de URL ou POST com FormData
-      // Como o URL fornecido é para um script que provavelmente espera parâmetros de query ou um POST simples,
-      // vamos usar um POST com os dados no corpo.
-      const response = await fetch(WEBHOOK_URL, { // Corrigido para usar WEBHOOK_URL
+      const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json', // Ou 'application/x-www-form-urlencoded' se o script esperar isso
+          'Content-Type': 'text/plain;charset=utf-8', // Alterado para text/plain para compatibilidade com Google Apps Script
           'Accept': 'application/json'
         },
-        body: JSON.stringify(formPayload)
+        body: JSON.stringify(formPayload) // O corpo ainda é JSON, mas o Apps Script o lerá como texto
       });
 
       if (response.ok) {
         console.log('Dados enviados com sucesso para o webhook');
         setIsSubmitted(true);
         
-        // Fechar o modal após 3 segundos
         setTimeout(() => {
           setIsSubmitted(false);
           setFormData({ name: '', email: '', phone: '' });
@@ -66,7 +60,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         }, 3000);
       } else {
         console.error('Erro na resposta do webhook:', response.status, response.statusText);
-        // Ainda mostra sucesso para o usuário para uma UX melhor, mas registra o erro
         setIsSubmitted(true);
         
         setTimeout(() => {
@@ -78,7 +71,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     } catch (error) {
       console.error('Erro ao enviar para webhook:', error);
       
-      // Salvar dados localmente como fallback (apenas para console.log neste exemplo)
       console.log('Dados salvos localmente (fallback):', {
         name: formData.name,
         email: formData.email,
@@ -87,7 +79,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         timestamp: new Date().toISOString()
       });
       
-      // Ainda mostra sucesso para o usuário para uma UX melhor, mas registra o erro
       setIsSubmitted(true);
       
       setTimeout(() => {
