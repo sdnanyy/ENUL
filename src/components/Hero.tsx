@@ -1,10 +1,7 @@
-"use client";
-
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { LazyImage } from "@/components/LazyImage";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import heroImage from '@/assets/hero-image.jpg';
+import { Button } from "../components/ui/button";
+import LazyImage from "./LazyImage";
+import AnimatedSection from "./AnimatedSection";
+import heroImage from '../assets/hero-image.jpg';
 
 const Hero = () => {
   return (
