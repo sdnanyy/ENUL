@@ -1,10 +1,10 @@
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react'; // Removendo importações de Instagram, Facebook, Linkedin
 
 export default function Footer() {
   return (
     <footer className="bg-brand-teal text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Ajustando o grid para 3 colunas */}
           <div className="sm:col-span-2">
             <div className="mb-6">
               <img 
@@ -46,38 +46,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Siga-nos</h4>
-            <div className="flex space-x-4">
-              <a 
-                href="https://www.instagram.com/unilanguages" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a 
-                href="https://www.facebook.com/unilanguages" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/company/unilanguages" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-brand-yellow transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
+          {/* A seção "Siga-nos" foi removida daqui */}
+
         </div>
 
         <div className="border-t border-white/20 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-sm sm:text-base text-white/60">
