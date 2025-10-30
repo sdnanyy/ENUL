@@ -1,5 +1,7 @@
-import { Button } from "./ui/button";
+import LazyImage from "./LazyImage";
 import AnimatedSection from "./AnimatedSection";
+import { Button } from "./ui/button";
+import heroImage from '../assets/hero-image.jpg';
 
 const Hero = () => {
   return (
@@ -32,17 +34,13 @@ const Hero = () => {
           </div>
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="bg-gradient-to-br from-indigo-200 to-blue-300 rounded-2xl shadow-2xl w-full max-w-lg h-96 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                    <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center">
-                      <div className="bg-indigo-500 rounded-full w-8 h-8"></div>
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Aprendizado Interativo</h3>
-                  <p className="text-white/90">Experimente nossa metodologia única</p>
-                </div>
-              </div>
+              <LazyImage 
+                src={heroImage} 
+                alt="Estudante aprendendo idiomas" 
+                className="rounded-2xl shadow-2xl w-full max-w-lg"
+                width={500}
+                height={500}
+              />
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
                 <div className="flex items-center">
                   <div className="bg-green-100 p-2 rounded-full mr-3">
