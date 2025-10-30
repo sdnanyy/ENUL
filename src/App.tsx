@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'; // Importando Routes, Route, useLocation, useNavigate
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import ContactForm from './components/ContactForm';
 import HeroSection from './components/HeroSection';
-import Pillars from './components/Pillars';
+// import Pillars from './components/Pillars'; // Removendo a importação de Pillars
 import EmotionalMentoring from './components/EmotionalMentoring';
 import Problem from './components/Problem';
 import Testimonials from './components/Testimonials';
@@ -27,7 +27,7 @@ function App() {
   const handleCloseContactForm = () => {
     setContactFormOpen(false);
     if (location.pathname === '/register') {
-      navigate('/'); // Navega de volta para a home se o formulário foi aberto pela rota /register
+      navigate('/');
     }
   };
 
@@ -40,7 +40,7 @@ function App() {
       />
       <ContactForm
         isOpen={contactFormOpen}
-        onClose={handleCloseContactForm} // Usando a nova função de fechar
+        onClose={handleCloseContactForm}
       />
       
       <Routes>
@@ -50,11 +50,10 @@ function App() {
             <Problem onOpenContactForm={() => setContactFormOpen(true)} />
             <EmotionalMentoring onOpenContactForm={() => setContactFormOpen(true)} />
             <Testimonials onOpenContactForm={() => setContactFormOpen(true)} />
-            <Pillars />
+            {/* <Pillars /> Removendo o componente Pillars */}
             <CTA onOpenContactForm={() => setContactFormOpen(true)} />
           </>
         } />
-        {/* A rota /register é tratada pelo useEffect para abrir o modal, não renderiza um componente diretamente aqui */}
         <Route path="/register" element={null} /> 
       </Routes>
 
