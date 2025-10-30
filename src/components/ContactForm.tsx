@@ -29,7 +29,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Integração JavaScript - Enviar dados para o webhook
-      const WEBHOOK_URL = const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbx6-qMFnHQnL69QJlsavVPPAhQ0Cq5T-U1V6osiEAdCANfLicmWRdsHsdSLBIz6uEE-/exec';
+      const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbx6-qMFnHQnL69QJlsavVPPAhQ0Cq5T-U1V6osiEAdCANfLicmWRdsHsdSLBIz6uEE-/exec';
       
       // Dados do formulário para envio
       const formPayload = {
@@ -45,7 +45,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       // Para Google Apps Script, geralmente é um GET com parâmetros de URL ou POST com FormData
       // Como o URL fornecido é para um script que provavelmente espera parâmetros de query ou um POST simples,
       // vamos usar um POST com os dados no corpo.
-      const response = await fetch(webhookUrl, {
+      const response = await fetch(WEBHOOK_URL, { // Corrigido para usar WEBHOOK_URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Ou 'application/x-www-form-urlencoded' se o script esperar isso
