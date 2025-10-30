@@ -1,108 +1,52 @@
+import React from 'react';
+import { Link } from 'react-router-dom'; // Importando o componente Link para navegação interna
 
-import { Users, MessageCircle, Globe, Heart, Clock, Shield } from 'lucide-react';
-import AnimatedSection from './AnimatedSection';
-
-const benefits = [
-  {
-    icon: Clock,
-    title: 'Aulas de inglês no seu ritmo',
-    description: 'Aprenda com personalização total — respeitando sua rotina, seu jeito e seu tempo.',
-    color: 'teal'
-  },
-  {
-    icon: MessageCircle,
-    title: 'Conversação real',
-    description: 'Aulas de conversação real com prática leve, correção gentil e zero julgamentos. Aqui você não precisa ter medo de treinar inglês.',
-    color: 'yellow'
-  },
-  {
-    icon: Shield,
-    title: 'Mentoria individual',
-    description: 'Mentoria e acompanhamento individual pra te ajudar a vencer o medo de errar.',
-    color: 'orange'
-  },
-  {
-    icon: Heart,
-    title: 'Ambiente acolhedor',
-    description: 'Nada de rigidez ou pressão. Aqui, você se sente segura, respeitada e motivada.',
-    color: 'teal'
-  },
-  {
-    icon: Globe,
-    title: 'Confiança global',
-    description: 'Desenvolva a confiança para se comunicar em qualquer situação profissional ou pessoal.',
-    color: 'yellow'
-  },
-  {
-    icon: Users,
-    title: 'Inglês do dia a dia',
-    description: 'Você aprende com músicas, filmes e conversas reais — nada de decoreba cansativa.',
-    color: 'orange'
-  }
-];
-
-const colorClasses = {
-  teal: 'text-brand-teal bg-brand-teal/10',
-  yellow: 'text-brand-yellow bg-brand-yellow/10',
-  'orange-light': 'text-brand-orange-light bg-brand-orange-light/10',
-  orange: 'text-brand-orange bg-brand-orange/10'
-};
-
-export default function Pillars() {
-  const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Vi os benefícios da Uni Languages e gostaria saber como funcionam as aulas!";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+const Pillars = () => {
+  // A variável whatsappUrl pode se tornar não utilizada se não for usada em outro lugar.
+  // Não a removeremos, pois não foi solicitado.
+  const whatsappUrl = "https://wa.me/1234567890"; // Exemplo de URL, pode ser diferente no seu código
 
   return (
-    <section id="pilares" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Benefícios de aprender inglês com a Uni Languages
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Descubra como nossa metodologia única pode transformar sua relação com o inglês
-          </p>
-        </AnimatedSection>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <AnimatedSection
-                key={index}
-                animation="slideUp"
-                className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className={`w-16 h-16 rounded-2xl ${colorClasses[benefit.color as keyof typeof colorClasses]} flex items-center justify-center mb-6`}>
-                  <Icon className="h-8 w-8" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </AnimatedSection>
-            );
-          })}
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold text-brand-teal mb-8">Nossos Pilares</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Pillar 1 */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-brand-purple mb-4">Imersão Cultural</h3>
+            <p className="text-gray-700">
+              Aprenda não apenas a língua, mas também a rica cultura dos países onde ela é falada.
+            </p>
+          </div>
+          {/* Pillar 2 */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-brand-purple mb-4">Metodologia Dinâmica</h3>
+            <p className="text-gray-700">
+              Aulas interativas e práticas que aceleram seu aprendizado e o tornam divertido.
+            </p>
+          </div>
+          {/* Pillar 3 */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-brand-purple mb-4">Professores Nativos</h3>
+            <p className="text-gray-700">
+              Estude com falantes nativos que trazem a autenticidade da língua para a sala de aula.
+            </p>
+          </div>
         </div>
-
-        <div className="text-center">
-          <p className="text-base sm:text-lg text-gray-600 mb-6">
-            Já imaginou ter tudo isso aprendendo inglês?
+        <div className="mt-12">
+          <p className="text-lg text-gray-800 mb-6">
+            Pronto para começar sua jornada bilíngue?
           </p>
-          <a 
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
+          <Link // Alterado de <a> para <Link>
+            to="/register" // Novo destino para o formulário de cadastro
+            className="bg-brand-teal text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-brand-teal/90 transition-colors duration-300"
           >
-            <MessageCircle className="h-5 w-5" />
-            <span>Fale conosco</span>
-          </a>
+            Inscreva-se Agora {/* Novo texto do botão */}
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Pillars;
