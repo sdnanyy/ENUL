@@ -1,4 +1,3 @@
-import { useState } from 'react'; // Mantido caso haja outros usos de useState no futuro
 import { ChevronRight } from 'lucide-react'; // Mantido caso haja outros usos de ChevronRight no futuro
 
 interface HeroSectionProps {
@@ -18,8 +17,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContactForm }) => {
           Aprenda idiomas de forma imersiva e eficaz, com foco na cultura e na sua inteligência emocional.
         </p>
         <div className="mb-8 animate-fade-in-up delay-400">
-          <button // Alterado de <a> para <button>
-            onClick={onOpenContactForm} // Adicionado onClick para abrir o formulário
+          <button
+            onClick={onOpenContactForm}
             className="bg-brand-teal text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-brand-teal/90 transition-colors duration-300"
           >
             Fale Conosco
