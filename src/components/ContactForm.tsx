@@ -8,9 +8,9 @@ interface ContactFormProps {
 
 export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const [formData, setFormData] = useState({
-    name: '',
+    nome: '', // Alterado de 'name' para 'nome'
     email: '',
-    phone: ''
+    telefone: '' // Alterado de 'phone' para 'telefone'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -31,9 +31,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbx6-qMFnHQnL69QJlsavVPPAhQ0Cq5T-U1V6osiEAdCANfLicmWRdsHsdSLBIz6uEE-/exec';
       
       const formPayload = {
-        name: formData.name,
+        nome: formData.nome, // Usando 'nome'
         email: formData.email,
-        phone: formData.phone,
+        telefone: formData.telefone, // Usando 'telefone'
         source: 'landing_page_contact_form',
         timestamp: new Date().toISOString()
       };
@@ -43,10 +43,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8', // Alterado para text/plain para compatibilidade com Google Apps Script
+          'Content-Type': 'text/plain;charset=utf-8',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(formPayload) // O corpo ainda é JSON, mas o Apps Script o lerá como texto
+        body: JSON.stringify(formPayload)
       });
 
       if (response.ok) {
@@ -55,7 +55,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', email: '', phone: '' });
+          setFormData({ nome: '', email: '', telefone: '' }); // Resetando com 'nome' e 'telefone'
           onClose();
         }, 3000);
       } else {
@@ -64,7 +64,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', email: '', phone: '' });
+          setFormData({ nome: '', email: '', telefone: '' }); // Resetando com 'nome' e 'telefone'
           onClose();
         }, 3000);
       }
@@ -72,9 +72,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       console.error('Erro ao enviar para webhook:', error);
       
       console.log('Dados salvos localmente (fallback):', {
-        name: formData.name,
+        nome: formData.nome, // Usando 'nome'
         email: formData.email,
-        phone: formData.phone,
+        telefone: formData.telefone, // Usando 'telefone'
         source: 'landing_page_contact_form',
         timestamp: new Date().toISOString()
       });
@@ -83,7 +83,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       
       setTimeout(() => {
         setIsSubmitted(false);
-        setFormData({ name: '', email: '', phone: '' });
+        setFormData({ nome: '', email: '', telefone: '' }); // Resetando com 'nome' e 'telefone'
         onClose();
       }, 3000);
     } finally {
@@ -124,16 +124,16 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Nome */}
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="nome" className="block text-sm font-semibold text-gray-700 mb-2">
                   Nome completo *
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="nome"
+                    name="nome" // Alterado para 'nome'
+                    value={formData.nome}
                     onChange={handleInputChange}
                     required
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-transparent transition-all"
@@ -164,16 +164,16 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
               {/* Telefone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="telefone" className="block text-sm font-semibold text-gray-700 mb-2">
                   Telefone/WhatsApp *
                 </label>
                 <div className="relative">
                   <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                   <input
                     type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
+                    id="telefone"
+                    name="telefone" // Alterado para 'telefone'
+                    value={formData.telefone}
                     onChange={handleInputChange}
                     required
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-teal focus:border-transparent transition-all"
