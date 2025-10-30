@@ -29,7 +29,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Integração JavaScript - Enviar dados para o webhook
-      const webhookUrl = 'https://script.google.com/macros/s/AKfycbx6-qMFnHQnL69QJlsavVPPAhQ0Cq5T-U1V6osiEAdCANfLicmWRdsHsdSLBIz6uEE-/exec';
+      const WEBHOOK = 'https://script.google.com/macros/s/AKfycbx6-qMFnHQnL69QJlsavVPPAhQ0Cq5T-U1V6osiEAdCANfLicmWRdsHsdSLBIz6uEE-/exec';
       
       // Dados do formulário para envio
       const formPayload = {
