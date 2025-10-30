@@ -7,13 +7,14 @@ export default defineConfig({
   plugins: [dyadComponentTagger(), react()],
   server: {
     port: 8080,
-    proxy: {
-      '/api/webhook': {
-        target: 'http://localhost:5678',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/webhook/, '/webhook')
-      }
-    },
+    // Removendo a configuração de proxy para o webhook, pois agora ele é um URL externo.
+    // proxy: {
+    //   '/api/webhook': {
+    //     target: 'http://localhost:5678',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api\/webhook/, '/webhook')
+    //   }
+    // },
     hmr: {
       overlay: false
     }

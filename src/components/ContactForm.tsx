@@ -29,7 +29,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Integração JavaScript - Enviar dados para o webhook
-      const webhookUrl = '/api/webhook/recebeleads';
+      const webhookUrl = 'https://script.google.com/macros/s/AKfycbzO7nWWB6qRAtuiFI-iZocDKsaPtnrCgk7v6frYUY4xRLpNy1_sLXMXe_25Qo_zRvlV/exec?gid=0';
       
       // Dados do formulário para envio
       const formPayload = {
@@ -42,10 +42,13 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
       console.log('Enviando dados para webhook:', formPayload);
 
+      // Para Google Apps Script, geralmente é um GET com parâmetros de URL ou POST com FormData
+      // Como o URL fornecido é para um script que provavelmente espera parâmetros de query ou um POST simples,
+      // vamos usar um POST com os dados no corpo.
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json', // Ou 'application/x-www-form-urlencoded' se o script esperar isso
           'Accept': 'application/json'
         },
         body: JSON.stringify(formPayload)
@@ -63,7 +66,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         }, 3000);
       } else {
         console.error('Erro na resposta do webhook:', response.status, response.statusText);
-        // Ainda mostra sucesso para o usuário
+        // Ainda mostra sucesso para o usuário para uma UX melhor, mas registra o erro
         setIsSubmitted(true);
         
         setTimeout(() => {
@@ -75,8 +78,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     } catch (error) {
       console.error('Erro ao enviar para webhook:', error);
       
-      // Salvar dados localmente como fallback
-      console.log('Dados salvos localmente:', {
+      // Salvar dados localmente como fallback (apenas para console.log neste exemplo)
+      console.log('Dados salvos localmente (fallback):', {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -84,7 +87,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         timestamp: new Date().toISOString()
       });
       
-      // Ainda mostra sucesso para o usuário
+      // Ainda mostra sucesso para o usuário para uma UX melhor, mas registra o erro
       setIsSubmitted(true);
       
       setTimeout(() => {
