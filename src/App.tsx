@@ -46,7 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            <HeroSection /> {/* Removendo a prop onOpenContactForm */}
+            <HeroSection onOpenContactForm={() => setContactFormOpen(true)} /> {/* Passando a prop onOpenContactForm */}
             <Problem onOpenContactForm={() => setContactFormOpen(true)} />
             <EmotionalMentoring onOpenContactForm={() => setContactFormOpen(true)} />
             <Testimonials onOpenContactForm={() => setContactFormOpen(true)} />

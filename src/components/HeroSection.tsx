@@ -1,10 +1,12 @@
-import { Users, Star } from 'lucide-react'; // Removendo MessageCircle, pois não será mais usado no botão
+import { Users, Star } from 'lucide-react';
 import LazyImage from './LazyImage';
 
-const HeroSection = () => {
-  const whatsappNumber = "5511950816765";
-  const whatsappMessage = "Olá! Quero saber mais sobre as aulas de inglês da Uni Languages!";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+interface HeroSectionProps {
+  onOpenContactForm: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContactForm }) => {
+  // As variáveis whatsappNumber, whatsappMessage e whatsappUrl não são mais necessárias aqui, pois o botão abrirá o formulário.
 
   return (
     <section className="pt-24 pb-12 bg-gradient-to-br from-brand-yellow/10 via-white to-brand-orange-light/10">
@@ -25,15 +27,12 @@ const HeroSection = () => {
             </p>
             
             <div className="mb-8">
-              <a 
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                onClick={onOpenContactForm} // Chamando a função para abrir o formulário
                 className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
               >
-                {/* <MessageCircle className="h-5 w-5" /> -- Ícone de chat removido */}
                 <span>Quero saber mais</span>
-              </a>
+              </button>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
@@ -46,8 +45,7 @@ const HeroSection = () => {
                 <span>4.9/5 avaliação</span>
               </div>
               <div className="flex items-center space-x-2">
-                {/* Mantendo o ícone MessageCircle aqui, se for para o "Foco na fala" */}
-                <Users className="h-5 w-5 text-brand-teal" /> {/* Usando Users para manter a consistência, ou MessageCircle se for o caso */}
+                <Users className="h-5 w-5 text-brand-teal" />
                 <span>Foco na fala</span>
               </div>
             </div>
