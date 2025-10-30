@@ -1,7 +1,7 @@
-import { MessageCircle, Users, Star } from 'lucide-react'; // Importando apenas os ícones utilizados
-import LazyImage from './LazyImage'; // Importando LazyImage
+import { Users, Star } from 'lucide-react'; // Removendo MessageCircle, pois não será mais usado no botão
+import LazyImage from './LazyImage';
 
-const HeroSection = () => { // Removendo HeroSectionProps e onOpenContactForm
+const HeroSection = () => {
   const whatsappNumber = "5511950816765";
   const whatsappMessage = "Olá! Quero saber mais sobre as aulas de inglês da Uni Languages!";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -31,7 +31,7 @@ const HeroSection = () => { // Removendo HeroSectionProps e onOpenContactForm
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-brand-orange-light transition-all transform hover:scale-105 shadow-lg"
               >
-                <MessageCircle className="h-5 w-5" />
+                {/* <MessageCircle className="h-5 w-5" /> -- Ícone de chat removido */}
                 <span>Quero saber mais</span>
               </a>
             </div>
@@ -46,7 +46,8 @@ const HeroSection = () => { // Removendo HeroSectionProps e onOpenContactForm
                 <span>4.9/5 avaliação</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MessageCircle className="h-5 w-5 text-brand-teal" />
+                {/* Mantendo o ícone MessageCircle aqui, se for para o "Foco na fala" */}
+                <Users className="h-5 w-5 text-brand-teal" /> {/* Usando Users para manter a consistência, ou MessageCircle se for o caso */}
                 <span>Foco na fala</span>
               </div>
             </div>
